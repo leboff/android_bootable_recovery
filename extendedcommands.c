@@ -951,8 +951,10 @@ void show_partition_menu()
 
             if (is_path_mounted(v->mount_point))
             {
+                ignore_data_media_workaround(1);
                 if (0 != ensure_path_unmounted(v->mount_point))
                     ui_print("Error unmounting %s!\n", v->mount_point);
+                ignore_data_media_workaround(0);
             }
             else
             {
