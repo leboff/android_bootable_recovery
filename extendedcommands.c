@@ -43,7 +43,7 @@
 
 #include "adb_install.h"
 
-int signature_check_enabled = 1;
+int signature_check_enabled = 0;
 int script_assert_enabled = 1;
 static const char *SDCARD_UPDATE_FILE = "/sdcard/update.zip";
 
